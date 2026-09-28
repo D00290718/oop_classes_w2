@@ -14,7 +14,7 @@ class Rectangle:
 
     def display(self): #Ex. B2 function
         format = f"Rectangle[length={self.length}, width={self.width}, colour={self.colour}]"
-        print(format)
+        return format #Had to add this so that Ex. B4 would work.
 
     #EXERCISE B3 FUNCTION
     def calc_area(self):
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     print(f"Width: {obj.width}")
     print(f"colour: {obj.colour}")
 
-    obj.display()
+    print(obj.display())
 
     #Ex. B3 :
 
