@@ -12,9 +12,15 @@ class Rectangle:
         self.width = 50
         self.colour = "green"
 
-    def method(self):
+    def display(self): #Ex. B2 function
         format = f"Rectangle[length={self.length}, width={self.width}, colour={self.colour}]"
         print(format)
+
+    #EXERCISE B3 FUNCTION
+    def calc_area(self):
+        area = self.length * self.width
+        return area
+
 
 if __name__ == "__main__":
     obj = Rectangle()
@@ -23,9 +29,14 @@ if __name__ == "__main__":
     print(f"Width: {obj.width}")
     print(f"colour: {obj.colour}")
 
-    obj.method()
+    obj.display()
 
-#Exercise B2
+    #Ex. B3 :
 
-#Commit your code after your class is complete, including your method.
+    area = obj.calc_area()
+    print(f"Area of rectangle LxW = {area}")
+
+
+#Commit your code after your method is complete and functions correctly.
+
 
