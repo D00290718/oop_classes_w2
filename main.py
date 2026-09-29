@@ -1,8 +1,10 @@
 from shapes import Rectangle
+import random #your program should generate a random number between 1 and 10.
 
-#28/09/2026 12:00-14:00
+#29/09/2026 14:00-16:00
 #D00290718
 
+#new worksheet : Constructors & Encapsulation File PDF
 #exercise B4
 
 if __name__ == "__main__":
@@ -12,14 +14,26 @@ if __name__ == "__main__":
     for i in range(5):
         print(f"\n\n{i+1}/5")
 
-        obj = Rectangle()
+
         length = int(input("Length: "))
         width = int(input("Width: "))
-        colour = str(input("Colour: "))
+
+        # Exercise A4 on new worksheet
+        number = random.randint(1, 10)
+        if number % 2 == 0:
+            print(f"You got an even number so you are allowed to pick your own colour!")
+            colour = str(input("Colour: ")).lower()
+            obj = Rectangle(length, width, colour)
+            obj.colour = colour
+        else:
+            print(f"You got an odd number so I chose the default colour for you.")
+            obj = Rectangle(length, width)
+            obj.colour = "blue"
+
 
         obj.length = length
         obj.width = width
-        obj.colour = colour
+
 
         objects.append(obj)
 
@@ -37,7 +51,7 @@ if __name__ == "__main__":
 
     while True:
         #Ask the user to enter a colour,
-        user_colour_to_find = input("\nPlease enter a colour: ").lower()
+        user_colour_to_find = input("\nPlease enter a colour to find: ").lower()
         if user_colour_to_find == "red":
             print("Error - Choose any other colour, just not red.")
         else:
