@@ -1,16 +1,18 @@
 
-#28/09/2026 12:00-14:00
+#29/09/2026 14:00-16:00
 #D00290718
 
-#Exercise b1:
+
+#New Exercise sheet: Constructors & Encapsulation File PDF
 
 class Rectangle:
 
-    def __init__(self):
+    #Exercise A3) on the new worksheet :
+    def __init__(self, length, width, colour = "blue"):
         #Reminder: Whenever you create a method in a class, you need to:
-        self.length = 50
-        self.width = 50
-        self.colour = "green"
+        self.length = length
+        self.width = width
+        self.colour = colour
 
     def display(self): #Ex. B2 function
         format = f"Rectangle[length={self.length}, width={self.width}, colour={self.colour}]"
@@ -23,7 +25,10 @@ class Rectangle:
 
 
 if __name__ == "__main__":
-    obj = Rectangle()
+    #Exercise A3) on new worksheet:
+    length = 50
+    width = 40
+    obj = Rectangle(length, width)
 
     print(f"Length: {obj.length}")
     print(f"Width: {obj.width}")
