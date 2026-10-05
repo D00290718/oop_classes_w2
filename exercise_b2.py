@@ -9,7 +9,7 @@ from people import Employee
 
 employees = {}
 
-for i in range(2):
+for i in range(5):
     print(f"\n\nEmployee {i+1}/5")
 
     #q1 and #q2
