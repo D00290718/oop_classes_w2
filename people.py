@@ -58,20 +58,21 @@ class Employee:
 
 #Exercise A2)
 
-f_name = input("What is your first name: ")
-l_name = input("What is your last name: ")
-age = input("What is your age: ")
-print("Please choose an option below")
-print("1 = Left handed")
-print("2 = Right handed")
+if __name__ == "__main__":
+    f_name = input("What is your first name: ")
+    l_name = input("What is your last name: ")
+    age = input("What is your age: ")
+    print("Please choose an option below")
+    print("1 = Left handed")
+    print("2 = Right handed")
 
-while True:
-    option = int(input("\nEnter a number: "))
-    if option == 1:
-        left_handed = True
-        break
-    elif option == 2:
-        left_handed = False
-        break
+    while True:
+        option = int(input("\nEnter a number: "))
+        if option == 1:
+            left_handed = True
+            break
+        elif option == 2:
+            left_handed = False
+            break
 
-obj = Person(f_name, l_name, age, left_handed)
+    obj = Person(f_name, l_name, age, left_handed)
