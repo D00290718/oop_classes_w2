@@ -20,12 +20,22 @@ class Pizza:
         else: #If the value supplied is valid, it should be stored
             self.__size = size
 
+        #For
+        self.pizza_prices = {
+            "Small": 10,
+            "Medium": 12,
+            "Large": 15,
+            "Extra-large": 18,
+            "per_topping_charge": 0.85
+        }
+
     #Exercise A3
 
     #Ex. A3 - Q1
     def display(self):
         a = ""
         counter = 1
+        print(self.toppings)
         for topping in self.toppings:
             if counter == len(self.toppings):
                 a += topping
@@ -68,4 +78,13 @@ class Pizza:
         except ValueError:
             return False
 
-    
+
+    #Ex. B2
+
+    def calc_price(self):
+        pizza_cost = self.pizza_prices[self.__size] #This is without toppings
+        amount_of_toppings = len(self.toppings)
+        cost_per_topping = self.pizza_prices["per_topping_charge"]
+        toppings_total_cost = amount_of_toppings * cost_per_topping
+        final_pizza_cost = pizza_cost + toppings_total_cost
+        return final_pizza_cost
