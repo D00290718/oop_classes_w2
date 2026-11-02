@@ -8,17 +8,29 @@ from datetime import datetime
 
 #1.
 from orders import Pizza
-
+from orders import Users
 #2.
 orders = {}
 
 #3.
 username = input("What is your Username: ")
+while True:
+    password = input(f"{username}, what is your Password: ")
+    obj = Users(username, password)
+    result = obj.check_password()
+    if result == True:
+        print("Login Successful")
+        break
+    elif result == False:
+        print("- ERROR - Invalid password. Please try again.")
+    else:
+        print(f"- ERROR - That username ({username}) does not exist!")
 
 #4.
 while True: #Repeatedly asks the user if they want to order a pizza.
     option = input("\nDo you want to order a pizza? (y/n): ")
     if option.lower() == "n":
+        print("Logging out...")
         break
     else:
 

@@ -31,8 +31,8 @@ class Employee:
 
     #q4.
     def display(self):
-        format = f"Employee[ id: {self.id}, first name: {self.first_name}, last name: {self.last_name}, salary: {self._salary} ]"
-        return format
+        _format = f"Employee[ id: {self.id}, first name: {self.first_name}, last name: {self.last_name}, salary: {self._salary} ]"
+        return _format
 
     #q5.
     def calc_net_pay(self):
@@ -59,6 +59,8 @@ class Employee:
 #Exercise A2)
 
 if __name__ == "__main__":
+
+
     f_name = input("What is your first name: ")
     l_name = input("What is your last name: ")
     age = input("What is your age: ")
