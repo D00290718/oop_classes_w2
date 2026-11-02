@@ -149,23 +149,13 @@ class Users:
 
         return valid_pw
 
-"""
-Create a class User that contains:
 
-username
-password
-You should encapsulate this information appropriately.
+#Exercises: Composition in Classes File
 
-Write a method check_password() that takes in a password and checks if it matches the value stored within this user. It should return True if the password matches and False otherwise.
+#Ex A1 + A2
 
-Write a method validate_password() that takes in a piece of text and checks if it is upholds your system's password rule. The method should be a static method (i.e. should use @staticmethod) and you should include appropriate password rule logic here.
+class Order:
 
-Write a method update_password() that takes in two pieces of text: the original password and the new password. If the original password matches the password currently stored, set the stored password to the new password and return True. Otherwise, return False.
-
-Update your pizza_shop.py to:
-
-Create a user object with hard-coded data and store it.
-Repeatedly do the following until the user chooses to terminate the program:
-Require that a user logs in before they can order anything.
-Provide an option to log out. When they log out, the pizzas in their order are written to a receipt file with their username and the current timestamp, and the order dictionary is wiped.
-"""
+    def __init__(self, username):
+        self._username = username
+        self._pizzas = {}
