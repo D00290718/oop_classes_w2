@@ -1,3 +1,5 @@
+from types import NotImplementedType
+
 
 #29/09/2026 14:00-16:00
 #D00290718
@@ -22,6 +24,22 @@ class Rectangle:
     def calc_area(self):
         area = self.length * self.width
         return area
+
+    #Homework Week 07 classword - Monday:
+    def __eq__(self, other: object) -> bool | NotImplementedType:
+        if not isinstance(other, Rectangle):
+            return NotImplemented
+
+        if self.length.lower() != other.length.lower():
+            return False
+
+        if self.width.lower() != other.width.lower():
+            return False
+
+        if self.colour != other.colour:
+            return False
+
+        return True
 
 
 if __name__ == "__main__":
