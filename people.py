@@ -1,3 +1,4 @@
+from types import NotImplementedType
 
 #29/09/2026 14:00-16:00
 #D00290718
@@ -12,6 +13,25 @@ class Person:
         self.age = age
         self.left_handed = left_handed
         print(self.first_name, self.last_name, self.age, self.left_handed)
+
+    # Homework Week 07 classword - Monday:
+    def __eq__(self, other: object) -> bool | NotImplementedType:
+        if not isinstance(other, Person):
+            return NotImplemented
+
+        if self.first_name.lower() != other.first_name.lower():
+            return False
+
+        if self.last_name.lower() != other.last_name.lower():
+            return False
+
+        if self.age != other.age:
+            return False
+
+        if self.left_handed != other.left_handed:
+            return False
+
+        return True
 
 #ON new worksheet, Exercise B1
 
