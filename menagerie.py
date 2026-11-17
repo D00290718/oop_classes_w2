@@ -17,7 +17,7 @@ animals_objs.append(obj3)
 
 #3) Create 2 user-defined Animal objects and add them to your list
 
-if 1== 2:
+if 1== 1:
     for i in range(2):
         print()
         print(f"Dog {i+1}/2")
