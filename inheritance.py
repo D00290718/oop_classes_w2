@@ -69,6 +69,10 @@ class Person:
         age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
         return age
 
+    def display(self):
+        msg = f"Name: {self.name}\nDOB: {self.dob}\nAge: {self.calc_age()}"
+        return msg
+
 
 
 #o#bj = Animal("08042002", "67kg", "Sam")
