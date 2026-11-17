@@ -61,7 +61,13 @@ class Person:
         self.name = name
         self.dob = dob
 
-    
+    # calculates the age of the person based on subtracting the date of birth from the current date
+
+    def calc_age(self):
+        birthDate = self.dob
+        today = date.today()
+        age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
+        return age
 
 
 
