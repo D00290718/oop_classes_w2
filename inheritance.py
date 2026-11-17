@@ -55,6 +55,16 @@ class Dog(Animal):
         return msg
 
 
+class Person:
+
+    def __init__(self, name, dob):
+        self.name = name
+        self.dob = dob
+
+    
+
+
+
 #o#bj = Animal("08042002", "67kg", "Sam")
 #obj.display()
 #p#rint(obj.calc_age())
