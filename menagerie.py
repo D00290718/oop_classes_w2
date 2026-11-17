@@ -33,10 +33,13 @@ if 1== 2:
 dog_obj1 = Dog(dob="05-12-2023", weight="6", breed="bulldog", name="Andrew", personality="Angry")
 dog_obj2 = Dog(dob="21-03-2022", weight="12", breed="german_shepherd", name="Dara", personality="Angry")
 dog_obj3 = Dog(dob="12-01-2019", weight="25", breed="shih_tzu", name="John", personality="Chill")
+dog_obj4 = Dog(dob="06-03-2026", weight="5", breed="golden_retriever", name="craig", personality="happy")
+
 
 animals_objs.append(dog_obj1)
 animals_objs.append(dog_obj2)
 animals_objs.append(dog_obj3)
+animals_objs.append(dog_obj4)
 
 #5) Shuffle the contents of the list
 
