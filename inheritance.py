@@ -54,9 +54,10 @@ class Dog(Animal):
         msg = f"Name: {self.name}\nDOB: {self.dob}\nWeight: {self.weight}\nBreed: {self.breed}\nPersonality: {self.personality}"
         return msg
 
-
+#Exercise A2)
 class Person:
 
+    #this should require the name and date of birth parameters
     def __init__(self, name, dob):
         self.name = name
         self.dob = dob
@@ -69,9 +70,30 @@ class Person:
         age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
         return age
 
+    #this should display the data of the person in a well-formatted manner
     def display(self):
         msg = f"Name: {self.name}\nDOB: {self.dob}\nAge: {self.calc_age()}"
         return msg
+
+class Student:
+
+    def __init__(
+            self,
+            name,
+            dob,
+            _valid_courses: list,
+            _student_count: int,
+            _student_num: int,
+            _student_course = "N/A",
+            _student_course_year = 1
+    ):
+        self.name = name
+        self.dob = dob
+        self._valid_courses = _valid_courses
+        self._student_count = _student_count
+
+        #default values set to the first course in the valid courses list (for the course name)
+        self._student_course = self._valid_courses[0]
 
 
 
